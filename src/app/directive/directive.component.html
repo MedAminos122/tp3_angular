@@ -1,0 +1,10 @@
+<h1>directive :</h1>
+<table>
+        <ul>
+        <ng-container *ngFor="let t of tab">  
+       <li *ngIf="t%2==0 ; else impaire">{{t}} cet element est paire</li>
+       <ng-template #impaire><li>{{t}} cet element est impaire</li></ng-template> 
+        <!--<button  *ngIf="t%2==0" (onclick)="onposition(indice)">position </button>!-->
+        </ng-container>
+        </ul>
+</table>
